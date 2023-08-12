@@ -25,6 +25,10 @@ interface PayInvoice {
 
 interface CheckInvoice {
   payment_hash: string;
+  paid: boolean;
+  details: {
+    expiry: number;
+  }
 }
 
 export class LNBitsWalletClass {
